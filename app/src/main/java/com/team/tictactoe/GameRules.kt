@@ -13,6 +13,10 @@ object GameRules {
         listOf(2, 4, 6)
     )
 
+    /**
+     * Проверяет все 8 выигрышных комбинаций.
+     * Возвращает победителя или null если победителя нет.
+     */
     fun checkWinner(board: List<Player?>): Player? {
         for (combo in WIN_COMBINATIONS) {
             val (a, b, c) = combo
@@ -23,10 +27,17 @@ object GameRules {
         return null
     }
 
+    /**
+     * Ничья = все ячейки заняты И нет победителя.
+     */
     fun isDraw(board: List<Player?>): Boolean {
         return board.none { it == null } && checkWinner(board) == null
     }
 
+    /**
+     * Возвращает индексы всех пустых ячеек.
+     * Используется в MinimaxAI для перебора ходов.
+     */
     fun getAvailableMoves(board: List<Player?>): List<Int> {
         return board.indices.filter { board[it] == null }
     }
