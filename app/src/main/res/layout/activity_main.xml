@@ -1,19 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#07070f"
+    android:padding="32dp">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TicTacToe AI"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:textColor="#a78bfa"
+        android:layout_marginBottom="16dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Играй против непобедимого AI"
+        android:textSize="14sp"
+        android:textColor="#5a5a7a"
+        android:layout_marginBottom="60dp"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="240dp"
+        android:layout_height="56dp"
+        android:text="Начать игру"
+        android:textSize="16sp"
+        android:textColor="#ffffff"
+        android:backgroundTint="#7c3aed"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btnExit"
+        android:layout_width="240dp"
+        android:layout_height="56dp"
+        android:text="Выйти"
+        android:textSize="16sp"
+        android:textColor="#a78bfa"
+        android:backgroundTint="#1a1a2e"/>
+
+</LinearLayout>
