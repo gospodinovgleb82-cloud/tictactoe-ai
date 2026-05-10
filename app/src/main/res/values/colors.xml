@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="bg_dark">#07070f</color>
+    <color name="surface">#1a1a2e</color>
+    <color name="purple">#7c3aed</color>
+    <color name="purple_light">#a78bfa</color>
+    <color name="text_primary">#e8e8f5</color>
+    <color name="text_muted">#5a5a7a</color>
+    <color name="win_human">#4ade80</color>
+    <color name="win_ai">#f87171</color>
 </resources>

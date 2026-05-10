@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">TicTacToe AI</string>
+    <string name="btn_start">Начать игру</string>
+    <string name="btn_new_game">Новая игра</string>
+    <string name="btn_exit">Выйти</string>
+    <string name="status_your_turn">Ваш ход (X)</string>
+    <string name="status_ai_turn">AI думает...</string>
+    <string name="status_human_win">Вы победили!</string>
+    <string name="status_ai_win">AI победил!</string>
+    <string name="status_draw">Ничья!</string>
 </resources>

@@ -1,6 +1,8 @@
 package com.team.tictactoe
 
 enum class Player {
-    X,
-    O
+    HUMAN,
+    AI;
+
+    fun symbol(): String = if (this == HUMAN) "X" else "O"
 }
