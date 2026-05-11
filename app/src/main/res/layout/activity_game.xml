@@ -9,17 +9,26 @@
     android:padding="24dp">
 
     <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TicTacToe AI"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#a78bfa"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
         android:id="@+id/tvStatus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Ваш ход (X)"
-        android:textSize="20sp"
+        android:textSize="22sp"
         android:textStyle="bold"
         android:textColor="#e8e8f5"
         android:layout_marginBottom="32dp"/>
 
     <GridLayout
-        android:id="@+id/gridBoard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:rowCount="3"
@@ -28,59 +37,48 @@
 
         <Button android:id="@+id/cell0"
             android:layout_width="100dp" android:layout_height="100dp"
-            android:textSize="36sp" android:textStyle="bold"
+            android:textSize="40sp" android:textStyle="bold"
             android:textColor="#a78bfa" android:backgroundTint="#1a1a2e"
-            android:layout_margin="4dp"/>
+            android:layout_margin="4dp" android:elevation="4dp"/>
         <Button android:id="@+id/cell1"
             android:layout_width="100dp" android:layout_height="100dp"
-            android:textSize="36sp" android:textStyle="bold"
+            android:textSize="40sp" android:textStyle="bold"
             android:textColor="#a78bfa" android:backgroundTint="#1a1a2e"
-            android:layout_margin="4dp"/>
+            android:layout_margin="4dp" android:elevation="4dp"/>
         <Button android:id="@+id/cell2"
             android:layout_width="100dp" android:layout_height="100dp"
-            android:textSize="36sp" android:textStyle="bold"
+            android:textSize="40sp" android:textStyle="bold"
             android:textColor="#a78bfa" android:backgroundTint="#1a1a2e"
-            android:layout_margin="4dp"/>
+            android:layout_margin="4dp" android:elevation="4dp"/>
         <Button android:id="@+id/cell3"
             android:layout_width="100dp" android:layout_height="100dp"
-            android:textSize="36sp" android:textStyle="bold"
+            android:textSize="40sp" android:textStyle="bold"
             android:textColor="#a78bfa" android:backgroundTint="#1a1a2e"
-            android:layout_margin="4dp"/>
+            android:layout_margin="4dp" android:elevation="4dp"/>
         <Button android:id="@+id/cell4"
             android:layout_width="100dp" android:layout_height="100dp"
-            android:textSize="36sp" android:textStyle="bold"
+            android:textSize="40sp" android:textStyle="bold"
             android:textColor="#a78bfa" android:backgroundTint="#1a1a2e"
-            android:layout_margin="4dp"/>
+            android:layout_margin="4dp" android:elevation="4dp"/>
         <Button android:id="@+id/cell5"
             android:layout_width="100dp" android:layout_height="100dp"
-            android:textSize="36sp" android:textStyle="bold"
+            android:textSize="40sp" android:textStyle="bold"
             android:textColor="#a78bfa" android:backgroundTint="#1a1a2e"
-            android:layout_margin="4dp"/>
+            android:layout_margin="4dp" android:elevation="4dp"/>
         <Button android:id="@+id/cell6"
             android:layout_width="100dp" android:layout_height="100dp"
-            android:textSize="36sp" android:textStyle="bold"
+            android:textSize="40sp" android:textStyle="bold"
             android:textColor="#a78bfa" android:backgroundTint="#1a1a2e"
-            android:layout_margin="4dp"/>
+            android:layout_margin="4dp" android:elevation="4dp"/>
         <Button android:id="@+id/cell7"
             android:layout_width="100dp" android:layout_height="100dp"
-            android:textSize="36sp" android:textStyle="bold"
+            android:textSize="40sp" android:textStyle="bold"
             android:textColor="#a78bfa" android:backgroundTint="#1a1a2e"
-            android:layout_margin="4dp"/>
+            android:layout_margin="4dp" android:elevation="4dp"/>
         <Button android:id="@+id/cell8"
             android:layout_width="100dp" android:layout_height="100dp"
-            android:textSize="36sp" android:textStyle="bold"
+            android:textSize="40sp" android:textStyle="bold"
             android:textColor="#a78bfa" android:backgroundTint="#1a1a2e"
-            android:layout_margin="4dp"/>
+            android:layout_margin="4dp" android:elevation="4dp"/>
 
     </GridLayout>
-
-    <Button
-        android:id="@+id/btnNewGame"
-        android:layout_width="240dp"
-        android:layout_height="56dp"
-        android:text="Новая игра"
-        android:textSize="16sp"
-        android:textColor="#ffffff"
-        android:backgroundTint="#7c3aed"/>
-
-</LinearLayout>

@@ -9,40 +9,62 @@
     android:padding="32dp">
 
     <TextView
-        android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TicTacToe AI"
-        android:textSize="36sp"
-        android:textStyle="bold"
+        android:text="✕ ○"
+        android:textSize="48sp"
         android:textColor="#a78bfa"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="8dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Играй против непобедимого AI"
+        android:text="TicTacToe AI"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="#e8e8f5"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Сможешь победить AI?"
         android:textSize="14sp"
         android:textColor="#5a5a7a"
-        android:layout_marginBottom="60dp"/>
+        android:layout_marginBottom="16dp"/>
+
+    <View
+        android:layout_width="60dp"
+        android:layout_height="2dp"
+        android:background="#7c3aed"
+        android:layout_marginBottom="48dp"/>
 
     <Button
         android:id="@+id/btnStart"
-        android:layout_width="240dp"
+        android:layout_width="260dp"
         android:layout_height="56dp"
         android:text="Начать игру"
         android:textSize="16sp"
+        android:textStyle="bold"
         android:textColor="#ffffff"
         android:backgroundTint="#7c3aed"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="12dp"/>
 
     <Button
         android:id="@+id/btnExit"
-        android:layout_width="240dp"
+        android:layout_width="260dp"
         android:layout_height="56dp"
         android:text="Выйти"
         android:textSize="16sp"
         android:textColor="#a78bfa"
         android:backgroundTint="#1a1a2e"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Minimax + Alpha-Beta AI"
+        android:textSize="11sp"
+        android:textColor="#3a3a5a"
+        android:layout_marginTop="32dp"/>
 
 </LinearLayout>
