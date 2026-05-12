@@ -11,14 +11,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val btnStart = findViewById<Button>(R.id.btnStart)
-        val btnExit  = findViewById<Button>(R.id.btnExit)
-
-        btnStart.setOnClickListener {
-            startActivity(Intent(this, GameActivity::class.java))
+        findViewById<Button>(R.id.btnStart).setOnClickListener {
+            startActivity(Intent(this, SelectActivity::class.java))
         }
 
-        btnExit.setOnClickListener {
+        findViewById<Button>(R.id.btnExit).setOnClickListener {
             finish()
         }
     }

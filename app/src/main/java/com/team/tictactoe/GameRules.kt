@@ -2,41 +2,37 @@ package com.team.tictactoe
 
 object GameRules {
 
-    val WIN_COMBINATIONS = listOf(
-        listOf(0, 1, 2),
-        listOf(3, 4, 5),
-        listOf(6, 7, 8),
-        listOf(0, 3, 6),
-        listOf(1, 4, 7),
-        listOf(2, 5, 8),
-        listOf(0, 4, 8),
-        listOf(2, 4, 6)
-    )
+    fun getWinCombinations(size: Int): List<List<Int>> {
+        val combos = mutableListOf<List<Int>>()
+        for (row in 0 until size)
+            combos.add((0 until size).map { row * size + it })
+        for (col in 0 until size)
+            combos.add((0 until size).map { it * size + col })
+        combos.add((0 until size).map { it * size + it })
+        combos.add((0 until size).map { it * size + (size - 1 - it) })
+        return combos
+    }
 
-    fun checkWinner(board: List<Player?>): Player? {
-        for (combo in WIN_COMBINATIONS) {
-            val (a, b, c) = combo
-            if (board[a] != null && board[a] == board[b] && board[b] == board[c]) {
-                return board[a]
-            }
+    fun checkWinner(board: List<Player?>, size: Int = 3): Player? {
+        for (combo in getWinCombinations(size)) {
+            val first = board[combo[0]] ?: continue
+            if (combo.all { board[it] == first }) return first
         }
         return null
     }
 
-    fun isDraw(board: List<Player?>): Boolean {
-        return board.none { it == null } && checkWinner(board) == null
+    fun isDraw(board: List<Player?>, size: Int = 3): Boolean {
+        return board.none { it == null } && checkWinner(board, size) == null
     }
 
     fun getAvailableMoves(board: List<Player?>): List<Int> {
         return board.indices.filter { board[it] == null }
     }
 
-    fun getWinningCombo(board: List<Player?>): List<Int>? {
-        for (combo in WIN_COMBINATIONS) {
-            val (a, b, c) = combo
-            if (board[a] != null && board[a] == board[b] && board[b] == board[c]) {
-                return combo
-            }
+    fun getWinningCombo(board: List<Player?>, size: Int = 3): List<Int>? {
+        for (combo in getWinCombinations(size)) {
+            val first = board[combo[0]] ?: continue
+            if (combo.all { board[it] == first }) return combo
         }
         return null
     }

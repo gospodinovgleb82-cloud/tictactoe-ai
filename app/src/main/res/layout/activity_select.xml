@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#07070f"
+    android:padding="32dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="✕ ○"
+        android:textSize="48sp"
+        android:textColor="#a78bfa"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Выбери размер поля"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#e8e8f5"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Чем больше поле — тем сложнее"
+        android:textSize="13sp"
+        android:textColor="#5a5a7a"
+        android:layout_marginBottom="48dp"/>
+
+    <Button
+        android:id="@+id/btn3x3"
+        android:layout_width="260dp"
+        android:layout_height="64dp"
+        android:text="3 × 3  —  Классика"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:backgroundTint="#7c3aed"
+        android:layout_marginBottom="12dp"/>
+
+    <Button
+        android:id="@+id/btn4x4"
+        android:layout_width="260dp"
+        android:layout_height="64dp"
+        android:text="4 × 4  —  Сложно"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:backgroundTint="#2563eb"
+        android:layout_marginBottom="12dp"/>
+
+    <Button
+        android:id="@+id/btn5x5"
+        android:layout_width="260dp"
+        android:layout_height="64dp"
+        android:text="5 × 5  —  Эксперт"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:backgroundTint="#0d9488"
+        android:layout_marginBottom="32dp"/>
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="260dp"
+        android:layout_height="48dp"
+        android:text="Назад"
+        android:textSize="14sp"
+        android:textColor="#5a5a7a"
+        android:backgroundTint="#1a1a2e"/>
+
+</LinearLayout>
