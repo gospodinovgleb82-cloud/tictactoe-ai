@@ -26,6 +26,7 @@ class GameController(
     fun onHumanMove(cellIndex: Int) {
         if (state.status != GameStatus.PLAYING) return
         if (state.currentTurn != Player.HUMAN) return
+        if (cellIndex !in 0..8) return
         if (state.board[cellIndex] != null) return
 
         val newBoard = state.board.toMutableList().also { it[cellIndex] = Player.HUMAN }
