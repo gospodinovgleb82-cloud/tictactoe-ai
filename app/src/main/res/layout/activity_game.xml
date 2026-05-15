@@ -29,56 +29,21 @@
         android:layout_marginBottom="32dp"/>
 
     <GridLayout
+        android:id="@+id/gridBoard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:rowCount="3"
         android:columnCount="3"
-        android:layout_marginBottom="32dp">
+        android:layout_marginBottom="32dp"/>
 
-        <Button android:id="@+id/cell0"
-            android:layout_width="100dp" android:layout_height="100dp"
-            android:textSize="40sp" android:textStyle="bold"
-            android:textColor="#a78bfa" android:backgroundTint="#1a1a2e"
-            android:layout_margin="4dp" android:elevation="4dp"/>
-        <Button android:id="@+id/cell1"
-            android:layout_width="100dp" android:layout_height="100dp"
-            android:textSize="40sp" android:textStyle="bold"
-            android:textColor="#a78bfa" android:backgroundTint="#1a1a2e"
-            android:layout_margin="4dp" android:elevation="4dp"/>
-        <Button android:id="@+id/cell2"
-            android:layout_width="100dp" android:layout_height="100dp"
-            android:textSize="40sp" android:textStyle="bold"
-            android:textColor="#a78bfa" android:backgroundTint="#1a1a2e"
-            android:layout_margin="4dp" android:elevation="4dp"/>
-        <Button android:id="@+id/cell3"
-            android:layout_width="100dp" android:layout_height="100dp"
-            android:textSize="40sp" android:textStyle="bold"
-            android:textColor="#a78bfa" android:backgroundTint="#1a1a2e"
-            android:layout_margin="4dp" android:elevation="4dp"/>
-        <Button android:id="@+id/cell4"
-            android:layout_width="100dp" android:layout_height="100dp"
-            android:textSize="40sp" android:textStyle="bold"
-            android:textColor="#a78bfa" android:backgroundTint="#1a1a2e"
-            android:layout_margin="4dp" android:elevation="4dp"/>
-        <Button android:id="@+id/cell5"
-            android:layout_width="100dp" android:layout_height="100dp"
-            android:textSize="40sp" android:textStyle="bold"
-            android:textColor="#a78bfa" android:backgroundTint="#1a1a2e"
-            android:layout_margin="4dp" android:elevation="4dp"/>
-        <Button android:id="@+id/cell6"
-            android:layout_width="100dp" android:layout_height="100dp"
-            android:textSize="40sp" android:textStyle="bold"
-            android:textColor="#a78bfa" android:backgroundTint="#1a1a2e"
-            android:layout_margin="4dp" android:elevation="4dp"/>
-        <Button android:id="@+id/cell7"
-            android:layout_width="100dp" android:layout_height="100dp"
-            android:textSize="40sp" android:textStyle="bold"
-            android:textColor="#a78bfa" android:backgroundTint="#1a1a2e"
-            android:layout_margin="4dp" android:elevation="4dp"/>
-        <Button android:id="@+id/cell8"
-            android:layout_width="100dp" android:layout_height="100dp"
-            android:textSize="40sp" android:textStyle="bold"
-            android:textColor="#a78bfa" android:backgroundTint="#1a1a2e"
-            android:layout_margin="4dp" android:elevation="4dp"/>
+    <Button
+        android:id="@+id/btnNewGame"
+        android:layout_width="260dp"
+        android:layout_height="56dp"
+        android:text="Новая игра"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:backgroundTint="#7c3aed"/>
 
-    </GridLayout>
+</LinearLayout>
