@@ -1,3 +1,4 @@
+// GameActivity.kt — Участник 2 (Евгений)
 package com.team.tictactoe
 
 import android.content.Intent
@@ -14,24 +15,32 @@ class GameActivity : AppCompatActivity() {
     private lateinit var controller: GameController
     private lateinit var cells: List<Button>
     private lateinit var tvStatus: TextView
+    private lateinit var tvScore: TextView
+    private lateinit var tvDifficulty: TextView
     private lateinit var btnNewGame: Button
     private lateinit var gridBoard: GridLayout
     private var boardSize = 3
+    private var difficulty = Difficulty.HARD
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game)
 
         boardSize  = intent.getIntExtra("BOARD_SIZE", 3)
-        tvStatus   = findViewById(R.id.tvStatus)
-        btnNewGame = findViewById(R.id.btnNewGame)
-        gridBoard  = findViewById(R.id.gridBoard)
+        difficulty = intent.getSerializableExtra("DIFFICULTY") as? Difficulty ?: Difficulty.HARD
+
+        tvStatus     = findViewById(R.id.tvStatus)
+        tvScore      = findViewById(R.id.tvScore)
+        tvDifficulty = findViewById(R.id.tvDifficulty)
+        btnNewGame   = findViewById(R.id.btnNewGame)
+        gridBoard    = findViewById(R.id.gridBoard)
+
+        tvDifficulty.text = "Сложность: ${difficulty.label()}  |  ${boardSize}×${boardSize}"
 
         setupBoard()
-
         btnNewGame.setOnClickListener { controller.startNewGame() }
 
-        controller = GameController(boardSize) { state -> updateUI(state) }
+        controller = GameController(boardSize, difficulty) { state -> updateUI(state) }
         controller.startNewGame()
     }
 
@@ -41,9 +50,7 @@ class GameActivity : AppCompatActivity() {
         gridBoard.columnCount = boardSize
 
         val dp = resources.displayMetrics.density
-        val cellSize = when (boardSize) {
-            3 -> 100; 4 -> 80; else -> 64
-        }
+        val cellSize = when (boardSize) { 3 -> 100; 4 -> 80; else -> 64 }
 
         val buttonList = mutableListOf<Button>()
         for (i in 0 until boardSize * boardSize) {
@@ -66,18 +73,27 @@ class GameActivity : AppCompatActivity() {
 
     private fun updateUI(state: GameState) {
         runOnUiThread {
+            // Обновляем ячейки
             state.board.forEachIndexed { index, player ->
                 cells[index].text      = player?.symbol() ?: ""
                 cells[index].isEnabled = player == null && state.status == GameStatus.PLAYING
+                // Сбрасываем цвет если новая игра
+                if (player == null) cells[index].setBackgroundColor(0xFF1a1a2e.toInt())
             }
 
+            // Статус
             tvStatus.text = when (state.status) {
-                GameStatus.PLAYING   -> if (state.currentTurn == Player.HUMAN) "Ваш ход (X)" else "AI думает..."
-                GameStatus.HUMAN_WIN -> "Вы победили!"
-                GameStatus.AI_WIN    -> "AI победил!"
-                GameStatus.DRAW      -> "Ничья!"
+                GameStatus.PLAYING   -> if (state.currentTurn == Player.HUMAN)
+                    "Ваш ход (X)" else "AI думает..."
+                GameStatus.HUMAN_WIN -> "Вы победили! 🎉"
+                GameStatus.AI_WIN    -> "AI победил! 🤖"
+                GameStatus.DRAW      -> "Ничья! 🤝"
             }
 
+            // Счёт
+            tvScore.text = controller.getScoreText()
+
+            // Подсветка победной комбинации
             val winCombo = GameRules.getWinningCombo(state.board, boardSize)
             if (winCombo != null) {
                 val color = if (state.status == GameStatus.HUMAN_WIN)
@@ -85,10 +101,16 @@ class GameActivity : AppCompatActivity() {
                 winCombo.forEach { cells[it].setBackgroundColor(color) }
             }
 
+            // Переход на экран результата через 1.5 сек
             if (state.status != GameStatus.PLAYING) {
                 Handler(Looper.getMainLooper()).postDelayed({
                     val intent = Intent(this, ResultActivity::class.java)
                     intent.putExtra("RESULT", state.status.name)
+                    intent.putExtra("BOARD_SIZE", boardSize)
+                    intent.putExtra("DIFFICULTY", difficulty)
+                    intent.putExtra("SCORE_HUMAN", controller.scoreHuman)
+                    intent.putExtra("SCORE_AI", controller.scoreAI)
+                    intent.putExtra("SCORE_DRAW", controller.scoreDraw)
                     startActivity(intent)
                 }, 1500)
             }

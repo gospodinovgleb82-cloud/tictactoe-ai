@@ -33,7 +33,17 @@
         android:text="AI был побеждён"
         android:textSize="14sp"
         android:textColor="#5a5a7a"
-        android:layout_marginBottom="48dp"/>
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Счёт сессии -->
+    <TextView
+        android:id="@+id/tvScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Счёт:  Вы 0  —  AI 0  —  Ничья 0"
+        android:textSize="14sp"
+        android:textColor="#a78bfa"
+        android:layout_marginBottom="40dp"/>
 
     <Button
         android:id="@+id/btnPlayAgain"
