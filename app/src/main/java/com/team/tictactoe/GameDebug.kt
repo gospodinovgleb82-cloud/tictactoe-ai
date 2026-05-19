@@ -1,3 +1,4 @@
+// GameDebug.kt — Участник 3 (Стас)
 package com.team.tictactoe
 
 object GameDebug {
@@ -16,7 +17,7 @@ object GameDebug {
             null, Player.AI, null,
             null, null, Player.AI
         )
-        val winner = GameRules.checkWinner(board)
+        val winner = GameRules.checkWinner(board, 3) // ИСПРАВЛЕНО: добавлен size
         assert(winner == Player.HUMAN) { "Ошибка: победитель должен быть HUMAN" }
         println("testWinnerRow: OK")
     }
@@ -27,18 +28,18 @@ object GameDebug {
             null, Player.AI, null,
             Player.HUMAN, null, Player.AI
         )
-        val winner = GameRules.checkWinner(board)
+        val winner = GameRules.checkWinner(board, 3) // ИСПРАВЛЕНО
         assert(winner == Player.AI) { "Ошибка: победитель должен быть AI" }
         println("testWinnerDiagonal: OK")
     }
 
     private fun testDraw() {
         val board = listOf(
-            Player.HUMAN, Player.AI,   Player.HUMAN,
+            Player.HUMAN, Player.AI,    Player.HUMAN,
             Player.HUMAN, Player.HUMAN, Player.AI,
-            Player.AI,   Player.HUMAN, Player.AI
+            Player.AI,    Player.HUMAN, Player.AI
         )
-        assert(GameRules.isDraw(board)) { "Ошибка: должна быть ничья" }
+        assert(GameRules.isDraw(board, 3)) { "Ошибка: должна быть ничья" } // ИСПРАВЛЕНО
         println("testDraw: OK")
     }
 

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Фон -->
+    <path android:fillColor="#7c3aed"
+        android:pathData="M16,0 L92,0 A16,16 0 0 1 108,16 L108,92 A16,16 0 0 1 92,108 L16,108 A16,16 0 0 1 0,92 L0,16 A16,16 0 0 1 16,0 Z"/>
+
+    <!-- Линии сетки -->
+    <path android:strokeColor="#ffffff" android:strokeWidth="1" android:strokeAlpha="0.3"
+        android:fillColor="@android:color/transparent"
+        android:pathData="M0,36 L108,36 M0,72 L108,72 M36,0 L36,108 M72,0 L72,108"/>
+
+    <!-- X слева сверху -->
+    <path android:strokeColor="#ffffff" android:strokeWidth="3.5" android:strokeLineCap="round"
+        android:fillColor="@android:color/transparent"
+        android:pathData="M10,10 L26,26 M26,10 L10,26"/>
+
+    <!-- O по центру сверху -->
+    <path android:strokeColor="#c4b5fd" android:strokeWidth="3.5"
+        android:fillColor="@android:color/transparent"
+        android:pathData="M54,18 m-10,0 a10,10 0 1,0 20,0 a10,10 0 1,0 -20,0"/>
+
+    <!-- X по центру -->
+    <path android:strokeColor="#ffffff" android:strokeWidth="3.5" android:strokeLineCap="round"
+        android:fillColor="@android:color/transparent"
+        android:pathData="M46,46 L62,62 M62,46 L46,62"/>
+
+    <!-- Победная диагональ -->
+    <path android:strokeColor="#a78bfa" android:strokeWidth="2.5" android:strokeLineCap="round"
+        android:fillColor="@android:color/transparent"
+        android:pathData="M18,18 L90,90"/>
+</vector>
