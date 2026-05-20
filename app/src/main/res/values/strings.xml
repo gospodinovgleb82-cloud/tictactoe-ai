@@ -4,8 +4,13 @@
     <string name="btn_new_game">Новая игра</string>
     <string name="btn_exit">Выйти</string>
     <string name="status_your_turn">Ваш ход (X)</string>
-    <string name="status_ai_turn">AI думает...</string>
-    <string name="status_human_win">Вы победили!</string>
-    <string name="status_ai_win">AI победил!</string>
-    <string name="status_draw">Ничья!</string>
+    <string name="status_ai_turn">AI думает…</string>
+    <string name="status_human_win">Вы победили! 🎉</string>
+    <string name="status_ai_win">AI победил! 🤖</string>
+    <string name="status_draw">Ничья! 🤝</string>
+    <string name="settings">Настройки</string>
+    <string name="theme_dark">Тёмная</string>
+    <string name="theme_light">Светлая</string>
+    <string name="theme_red">Красная</string>
+    <string name="theme_cyan">Циановая</string>
 </resources>

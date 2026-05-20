@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- X symbol -->
+    <path
+        android:pathData="M20,20 L44,44"
+        android:strokeWidth="7"
+        android:strokeColor="#a78bfa"
+        android:strokeLineCap="round"/>
+    <path
+        android:pathData="M44,20 L20,44"
+        android:strokeWidth="7"
+        android:strokeColor="#a78bfa"
+        android:strokeLineCap="round"/>
+    <!-- O symbol -->
+    <path
+        android:pathData="M76,32 A12,12 0 1,1 75.99,32"
+        android:strokeWidth="7"
+        android:strokeColor="#7c3aed"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000"/>
+    <!-- Grid lines -->
+    <path
+        android:pathData="M36,14 L36,94"
+        android:strokeWidth="3"
+        android:strokeColor="#3a2a6e"
+        android:strokeLineCap="round"/>
+    <path
+        android:pathData="M72,14 L72,94"
+        android:strokeWidth="3"
+        android:strokeColor="#3a2a6e"
+        android:strokeLineCap="round"/>
+    <path
+        android:pathData="M14,36 L94,36"
+        android:strokeWidth="3"
+        android:strokeColor="#3a2a6e"
+        android:strokeLineCap="round"/>
+    <path
+        android:pathData="M14,72 L94,72"
+        android:strokeWidth="3"
+        android:strokeColor="#3a2a6e"
+        android:strokeLineCap="round"/>
+</vector>

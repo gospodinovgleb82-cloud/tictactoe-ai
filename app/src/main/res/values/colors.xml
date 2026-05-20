@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Dark theme (default) -->
     <color name="bg_dark">#07070f</color>
     <color name="surface">#1a1a2e</color>
     <color name="purple">#7c3aed</color>
@@ -8,4 +9,25 @@
     <color name="text_muted">#5a5a7a</color>
     <color name="win_human">#4ade80</color>
     <color name="win_ai">#f87171</color>
+
+    <!-- Light theme -->
+    <color name="bg_light">#f0f0ff</color>
+    <color name="surface_light">#ffffff</color>
+    <color name="text_primary_light">#1a1a2e</color>
+    <color name="text_muted_light">#6b7280</color>
+
+    <!-- Red theme -->
+    <color name="bg_red">#0f0707</color>
+    <color name="surface_red">#2e1a1a</color>
+    <color name="red_accent">#dc2626</color>
+    <color name="red_light">#fca5a5</color>
+
+    <!-- Cyan theme -->
+    <color name="bg_cyan">#07100f</color>
+    <color name="surface_cyan">#0d2626</color>
+    <color name="cyan_accent">#0891b2</color>
+    <color name="cyan_light">#67e8f9</color>
+
+    <!-- Splash -->
+    <color name="splash_bg">#07070f</color>
 </resources>
