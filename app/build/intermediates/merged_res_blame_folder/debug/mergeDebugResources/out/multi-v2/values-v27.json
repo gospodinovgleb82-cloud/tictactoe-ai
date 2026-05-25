@@ -4,7 +4,7 @@
             "outputFile": "com.team.tictactoe.app-mergeDebugResources-34:/values-v27/values-v27.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\user\\.gradle\\caches\\9.3.1\\transforms\\5c4793f813baaf2bea9106d2f5ee9f00\\workspace\\transformed\\core-splashscreen-1.0.1\\res\\values-v27\\values-v27.xml",
+                    "source": "C:\\Users\\ALEX\\.gradle\\caches\\9.3.1\\transforms\\5c4793f813baaf2bea9106d2f5ee9f00\\workspace\\transformed\\core-splashscreen-1.0.1\\res\\values-v27\\values-v27.xml",
                     "from": {
                         "startLines": "2,3,4,7",
                         "startColumns": "4,4,4,4",
