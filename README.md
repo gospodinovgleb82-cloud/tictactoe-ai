@@ -1,33 +1,46 @@
-TicTacToe AI 🎮
-Мобильное приложение для Android — классические «Крестики-нолики» с непобедимым искусственным интеллектом на основе алгоритма Minimax + Alpha-Beta Pruning.
+# TicTacToe AI 
 
-Описание проекта
-TicTacToe AI — Android-приложение, в котором игрок сражается против AI. На уровне сложности «Сложный» AI перебирает все возможные ходы и никогда не проигрывает. Поддерживаются три размера поля и три уровня сложности, а прогресс-бар победных шансов обновляется в реальном времени после каждого хода.
+Мобильное приложение для Android — классические «Крестики-нолики» с непобедимым искусственным интеллектом на основе алгоритма **Minimax + Alpha-Beta Pruning**.
 
-Технологический стек
+---
 
-Язык: Kotlin
-Платформа: Android (min API 26)
-UI: Android Views, GridLayout, ConstraintLayout
-AI: Алгоритм Minimax + Alpha-Beta отсечение
-Асинхронность: Kotlin Coroutines (Dispatchers.IO → Main)
-Тестирование: JUnit 4
-VCS: Git / GitHub
+## Описание проекта
 
+**TicTacToe AI** — Android-приложение, в котором игрок сражается против AI. На уровне сложности «Сложный» AI перебирает все возможные ходы и никогда не проигрывает. Поддерживаются три размера поля и три уровня сложности, а прогресс-бар победных шансов обновляется в реальном времени после каждого хода.
 
-Ключевые функции
+---
 
-Три размера поля: 3×3, 4×4, 5×5
-Три уровня сложности AI: Лёгкий, Средний, Сложный
-Win Probability Bar: прогресс-бар победных шансов в реальном времени
-Native Performance: тяжёлые вычисления AI выполняются в фоновом потоке через Dispatchers.IO, UI не зависает
-Статистика сессии: счётчик побед игрока, AI и ничьих
-Комментарии AI: приложение показывает, сколько позиций перебрал AI при выборе хода
-Тёмная тема с анимациями победы и подсветкой выигрышных ячеек
+## Технологический стек
 
+| Компонент | Технология |
+|-----------|-----------|
+| Язык | Kotlin |
+| Платформа | Android (min API 26) |
+| UI | Android Views, GridLayout, ConstraintLayout |
+| AI | Minimax + Alpha-Beta Pruning |
+| Асинхронность | Kotlin Coroutines (`Dispatchers.IO → Main`) |
+| Тестирование | JUnit 4 |
+| VCS | Git / GitHub |
 
-Архитектура
-Проект построен по паттерну MVC:
+---
+
+## Ключевые функции
+
+-  **Три размера поля:** 3×3, 4×4, 5×5
+-  **Три уровня сложности AI:** Лёгкий, Средний, Сложный
+-  **Win Probability Bar:** прогресс-бар победных шансов в реальном времени
+-  **Performance:** вычисления AI выполняются в фоновом потоке через `Dispatchers.IO`, UI не зависает
+-  **Статистика сессии:** счётчик побед игрока, AI и ничьих
+-  **Комментарии AI:** приложение показывает, сколько позиций перебрал AI при выборе хода
+-  **Тёмная тема** с анимациями победы и подсветкой выигрышных ячеек
+
+---
+
+## Архитектура
+
+Проект построен по паттерну **MVC**:
+
+```
 ┌─────────────────────────────────────┐
 │              View Layer             │
 │  MainActivity / GameActivity /      │
@@ -45,11 +58,24 @@ Native Performance: тяжёлые вычисления AI выполняютс�
 │  GameState  │     │  ScoreEvaluator │
 │  Player     │     │  Alpha-Beta     │
 └─────────────┘     └─────────────────┘
+```
 
-Состав команды
-УчастникРольЗона ответственностиГлебProject Lead / AI DeveloperАлгоритм Minimax, Alpha-Beta, архитектура, code reviewЕвгенийFrontend / UI DeveloperВсе экраны, анимации, тёмная тема, release APKСтасLogic & Algorithm DeveloperGameState, GameRules, GameController, CoroutinesАлексQA / DocsТест-кейсы, unit-тесты, README, документация
+---
 
-Структура репозитория
+## Состав команды
+
+| Участник | Роль | Зона ответственности |
+|----------|------|----------------------|
+| Глеб | Project Lead / AI Developer | Алгоритм Minimax, Alpha-Beta, архитектура, code review |
+| Евгений | Frontend / UI Developer | Все экраны, анимации, тёмная тема, release APK |
+| Стас | Logic & Algorithm Developer | GameState, GameRules, GameController, Coroutines |
+| Алекс | QA / Docs | Тест-кейсы, unit-тесты, README, документация |
+
+---
+
+## Структура репозитория
+
+```
 tictactoe-ai/
 ├── app/src/main/
 │   ├── java/.../
@@ -72,20 +98,34 @@ tictactoe-ai/
 │           └── styles.xml
 └── app/src/test/
     └── GameTest.kt
+```
 
-Сборка и запуск
-Требования
+---
 
-Android Studio Hedgehog или новее
-Android SDK 26+
-Kotlin 1.9+
+## Сборка и запуск
 
-Debug-сборка
-bash./gradlew :app:assembleDebug
-Release APK
-bash./gradlew :app:assembleRelease
-Запуск тестов
-bash./gradlew :app:test
+### Требования
+- Android Studio Hedgehog или новее
+- Android SDK 26+
+- Kotlin 1.9+
 
-GitHub
-🔗 https://github.com/gospodinovgleb82-cloud/tictactoe-ai
+### Debug-сборка
+```bash
+./gradlew :app:assembleDebug
+```
+
+### Release APK
+```bash
+./gradlew :app:assembleRelease
+```
+
+### Запуск тестов
+```bash
+./gradlew :app:test
+```
+
+---
+
+## Ссылки
+
+- 🔗 **Репозиторий:** [github.com/gospodinovgleb82-cloud/tictactoe-ai](https://github.com/gospodinovgleb82-cloud/tictactoe-ai)
